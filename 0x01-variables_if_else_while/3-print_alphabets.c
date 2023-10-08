@@ -12,9 +12,10 @@ int main(void)
 {
 char c='a';
 char e='A';
-for(int i=0;i<52;i++)
+int i;
+for (i = 0; i < 52; i++)
 {
-if(i>=26)
+if(i >= 26)
 {
 putchar(e);
 e++;
