@@ -3,19 +3,19 @@
 #include <stdio.h>
 #include <string.h>
 /**
-* main - This code prints the alphabet in lowercase then 
+* main - This code prints the alphabet in lowercase then
 * uppercase
 *
 *Return: Always 0 (SUCCESS)
 */
 int main(void)
 {
-char c='a';
-char e='A';
+char c = 'a';
+char e = 'A';
 int i;
 for (i = 0; i < 52; i++)
 {
-if(i >= 26)
+if (i >= 26)
 {
 putchar(e);
 e++;
