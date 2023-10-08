@@ -11,9 +11,9 @@
 int main(void)
 {
 int i, j = 1, b = 1;
-for(i = 0 ; i < 9 ; i++)
+for (i = 0 ; i < 9 ; i++)
 {
-for( ; j < 10 ; j++)
+for ( ; j < 10 ; j++)
 {
 putchar('0' + i);
 putchar('0' + j);
@@ -25,7 +25,7 @@ putchar(',');
 putchar(' ');
 }
 b++;
-j=b;
+j = b;
 }
 putchar('\n');
 return (0);
