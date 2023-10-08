@@ -9,14 +9,14 @@
 */
 int main(void)
 {
-char c = 'A';
+char c = 'a';
 int b = 0;
 int i;
 for (i = 0; i < 16; i++)
 {
-if(i <= 9)
+if (i <= 9)
 {
-putchar('0'+b);
+putchar('0' + b);
 b++;
 }
 else
