@@ -10,12 +10,12 @@
 */
 int main(void)
 {
-int i, j=1, b = 1, k = 2;
-for(i = 0 ; i < 9 ; i++)
+int i, j = 1, b = 1, k = 2;
+for (i = 0 ; i < 9 ; i++)
 {
-for( ; j < 10 ; j++)
+for ( ; j < 10 ; j++)
 {
-for(k = j + 1 ; k < 10 ; k++){
+for (k = j + 1 ; k < 10 ; k++){
 putchar('0' + i);
 putchar('0' + j);
 putchar('0' + k);
@@ -28,7 +28,7 @@ putchar(' ');
 }
 }
 b++;
-j=b;
+j = b;
 k = j + 1;
 }
 putchar('\n');
