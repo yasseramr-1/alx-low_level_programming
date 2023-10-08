@@ -13,7 +13,7 @@ int b = 0;
 int i;
 for (i = 0; i < 10; i++)
 {
-putchar('0'+b);
+putchar('0' + b);
 if (i != 9)
 {
 putchar(',');
