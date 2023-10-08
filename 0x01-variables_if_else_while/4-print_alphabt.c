@@ -14,7 +14,7 @@ char c = 'a';
 int i;
 for (i = 0; i < 26; i++)
 {
-if ( c == 'e' || c == 'q')
+if (c == 'e' || c == 'q')
 {
 c++;
 continue;
