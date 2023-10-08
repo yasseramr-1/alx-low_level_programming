@@ -11,7 +11,6 @@
 int main(void)
 {
 char c = 'a';
-char e = 'A';
 int i;
 for (i = 0; i < 26; i++)
 {
