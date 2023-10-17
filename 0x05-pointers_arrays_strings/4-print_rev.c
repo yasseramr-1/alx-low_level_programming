@@ -5,10 +5,20 @@
  * @s: string
  * return: 0
  */
-void print_rev(char *s) {
-int length = _strlen(s);
-for (int i = length - 1; i >= 0; i--) {
-printf("%c", s[i]);
+void print_rev(char *s)
+{
+int longi = 0;
+int o;
+while (*s != '\0')
+{
+longi++;
+s++;
 }
-printf("\n");
+s--;
+for (o = longi; o > 0; o--)
+{
+_putchar(*s);
+s--;
+}
+_putchar('\n');
 }
