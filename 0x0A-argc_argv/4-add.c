@@ -1,71 +1,61 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <ctype.h>
 #include <string.h>
 
 /**
- * check_num - Check if a string contains only digits
- * @str: The string to check
- *
- * Return: 1 if the string contains only digits, 0 otherwise
- */
-int
- 
-check_num(char *str)
+ * isNum - check if string array is num
+ * @num: string to check
+ * Return: 0 if it's a number
+ *         1 if it's not a number
+*/
 
+int isNum(char num[])
 {
-    unsigned
- 
-int count;
+	int i, l = strlen(num);
 
-    count = 0;
-    while (count < strlen(str)) {
-        if (!isdigit(str[count])) {
-            return
- 
-0;
-        }
-
-        count++;
-    }
-
-    return
- 
-1;
+	for (i = 0; i < l; i++)
+	{
+		if (!isdigit(num[i]))
+			return (1);
+	}
+	return (0);
 }
 
+
 /**
- * main - Print the sum of all the command-line arguments
- * @argc: The number of command-line arguments
- * @argv: The command-line arguments
+ * main - a program that adds positive numbers
  *
- * Return: 0 on success, 1 on error
- */
-int
- 
-main(int argc, char *argv[])
+ * @argc: holds the number of arguments passed
+ * @argv: array pointer that holds the arguments passed
+ *
+ * Return: Always 0 (Success)
+*/
 
+int main(int argc, char *argv[])
 {
-    int count;
-    int str_to_int;
-    int sum = 0;
+	int i, sum;
 
-    count = 1;
-    while (count < argc) {
-        if (check_num(argv[count])) {
-            str_to_int = atoi(argv[count]);
-            sum += str_to_int;
-        } else {
-            printf("Error\n");
-            return
- 
-1;
-        }
-
-        count++;
-    }
-
-    printf("%d\n", sum);
-
-    return 0;
+	if (argc == 1)
+	{
+		printf("0\n");
+	}
+	else
+	{
+		sum = 0;
+		for (i = 1; i < argc; i++)
+		{
+			if (isNum(argv[i]) == 0)
+			{
+				sum += atoi(argv[i]);
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		printf("%d\n", sum);
+	}
+	return (0);
 }
